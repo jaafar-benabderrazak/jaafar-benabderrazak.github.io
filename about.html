@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Similar head section as index.html -->
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Jaafar Benabderrazak</title>
+    <meta name="description" content="En savoir plus sur Jaafar Benabderrazak, Machine Learning Engineer, Data Scientist et Enthousiaste de l'Intelligence Artificielle.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/3/3f/Favicon.ico" type="image/x-icon">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Scripts -->
+    <script defer src="js/scripts.js"></script>
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Main Navigation">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Me</a></li>
+                <li><a href="about.html" class="active" aria-current="page">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="resume.html">Resume</a></li>
@@ -19,8 +35,8 @@
         </nav>
     </header>
 
-    <section class="about">
-        <h1>About Me</h1>
+    <main>
+        <section class="about" aria-labelledby="about-heading">
         <img src="images/profile.jpg" alt="Jaafar Benabderrazak" class="profile-pic">
         <p>
             I'm Jaafar Benabderrazak, a passionate Machine Learning Engineer with a strong background in data engineering, analytics, and prediction. I hold an Engineering Degree from Ecole Centrale Lyon and have extensive experience working across various sectors including finance, law, and energy. I am dedicated to finding innovative solutions to complex problems and leveraging machine learning to unlock the hidden potential in data.
@@ -93,14 +109,18 @@
         <h2>Publications</h2>
         <p>Authored machine learning-focused articles on Medium, garnering over 10,000 reads.</p>
     </section>
+</main>
 
-    <footer>
-        <p>&copy; 2024 Jaafar Benabderrazak. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/jaafarbenabderrazak" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/jaafarbenabderrazak" target="_blank">LinkedIn</a>
-            <a href="https://medium.com/@jaafarbenabderrazak" target="_blank">Medium</a>
-        </div>
-    </footer>
+<footer>
+    <p>&copy; 2024 Jaafar Benabderrazak. All rights reserved.</p>
+    <div class="social-links">
+        <a href="https://github.com/jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+        <a href="https://linkedin.com/in/jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://medium.com/@jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="Medium">Medium</a>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" aria-label="Back to Top">↑</button>
 </body>
 </html>

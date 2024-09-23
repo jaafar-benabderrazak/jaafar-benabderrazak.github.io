@@ -6,15 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaafar Benabderrazak - Machine Learning Engineer</title>
     <meta name="description" content="Portfolio de Jaafar Benabderrazak présentant des projets en Machine Learning, Data Science et Intelligence Artificielle.">
-    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/3/3f/Favicon.ico" type="image/x-icon">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Scripts -->
     <script defer src="js/scripts.js"></script>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jaafar Benabderrazak",
+      "jobTitle": "Machine Learning Engineer",
+      "url": "https://yourportfolio.com",
+      "sameAs": [
+        "https://github.com/jaafarbenabderrazak",
+        "https://linkedin.com/in/jaafarbenabderrazak",
+        "https://medium.com/@jaafarbenabderrazak"
+      ],
+      "image": "https://yourportfolio.com/images/profile.jpg",
+      "description": "Portfolio de Jaafar Benabderrazak présentant des projets en Machine Learning, Data Science et Intelligence Artificielle."
+    }
+    </script>
 </head>
 <body>
     <header>
-        <nav aria-label="Navigation Principale">
+        <nav aria-label="Main Navigation">
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -24,30 +53,39 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" aria-labelledby="hero-heading">
             <img src="images/profile.jpg" alt="Portrait de Jaafar Benabderrazak" class="profile-pic" loading="lazy">
-            <h1>Hi, I'm Jaafar Benabderrazak</h1>
+            <h1 id="hero-heading">Hi, I'm Jaafar Benabderrazak</h1>
             <p>Machine Learning Engineer | Data Scientist | AI Enthusiast</p>
             <a href="projects.html" class="btn" role="button">View My Work</a>
         </section>
 
-        <section class="featured-projects">
-            <h2>Featured Projects</h2>
+        <section class="featured-projects" aria-labelledby="featured-projects-heading">
+            <h2 id="featured-projects-heading">Featured Projects</h2>
             <div class="projects-container">
                 <article class="project-card">
-                    <img src="https://images.unsplash.com/photo-1573497019364-75d8b8a43c34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDd8fGdhdXN8ZW58MHx8fHwxNjM0MjQwNjI3&ixlib=rb-1.2.1&q=80&w=400" alt="Outil de Prédiction de Propagation de Gaz" class="project-image" loading="lazy">
+                    <picture>
+                        <source srcset="https://images.unsplash.com/photo-1573497019364-75d8b8a43c34.webp" type="image/webp">
+                        <img src="https://images.unsplash.com/photo-1573497019364-75d8b8a43c34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDd8fGdhdXN8ZW58MHx8fHwxNjM0MjQwNjI3&ixlib=rb-1.2.1&q=80&w=400" alt="Outil de Prédiction de Propagation de Gaz" class="project-image" loading="lazy">
+                    </picture>
                     <h3>Gas Propagation Prediction Tool</h3>
                     <p>Predicting gas dynamics in pipelines using time series data in an AWS environment.</p>
                     <a href="projects.html#grtgaz-gas-propagation" class="btn" role="button">Learn More</a>
                 </article>
                 <article class="project-card">
-                    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGNoYXRib3R8ZW58MHx8fHwxNjM0MjQwNjI3&ixlib=rb-1.2.1&q=80&w=400" alt="Chatbot pour la Consultation de Documentation" class="project-image" loading="lazy">
+                    <picture>
+                        <source srcset="https://images.unsplash.com/photo-1504639725590-34d0984388bd.webp" type="image/webp">
+                        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGNoYXRib3R8ZW58MHx8fHwxNjM0MjQwNjI3&ixlib=rb-1.2.1&q=80&w=400" alt="Chatbot pour la Consultation de Documentation" class="project-image" loading="lazy">
+                    </picture>
                     <h3>Chatbot for Documentation Querying</h3>
                     <p>Developed a chatbot interfacing with Confluence to retrieve documentation, enhancing operational efficiency.</p>
                     <a href="projects.html#grtgaz-chatbot" class="btn" role="button">Learn More</a>
                 </article>
                 <article class="project-card">
-                    <img src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGRhdGF8ZW58MHx8fHwxNjM0MjQwNjI3&ixlib=rb-1.2.1&q=80&w=400" alt="Outil de Visualisation de Données" class="project-image" loading="lazy">
+                    <picture>
+                        <source srcset="https://images.unsplash.com/photo-1593642634367-d91a135587b5.webp" type="image/webp">
+                        <img src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGRhdGF8ZW58MHx8fHwxNjM0MjQwNjI3&ixlib=rb-1.2.1&q=80&w=400" alt="Outil de Visualisation de Données" class="project-image" loading="lazy">
+                    </picture>
                     <h3>Data Visualization Tool</h3>
                     <p>Created interactive dashboards using Tableau and Python to visualize complex datasets.</p>
                     <a href="projects.html#data-visualization" class="btn" role="button">Learn More</a>
@@ -55,16 +93,22 @@
             </div>
         </section>
 
-        <section class="gallery">
-            <h2>Gallery</h2>
+        <section class="gallery" aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading">Gallery</h2>
             <div class="gallery-container">
                 <!-- Added images from open data sources -->
                 <figure class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1602526210406-3a23d3c8e5ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE4fHxhaXxlbnwwfHx8fDE2MzQyNDMwNzI&ixlib=rb-1.2.1&q=80&w=400" alt="AI in action" class="gallery-image" loading="lazy">
+                    <picture>
+                        <source srcset="https://images.unsplash.com/photo-1602526210406-3a23d3c8e5ec.webp" type="image/webp">
+                        <img src="https://images.unsplash.com/photo-1602526210406-3a23d3c8e5ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE4fHxhaXxlbnwwfHx8fDE2MzQyNDMwNzI&ixlib=rb-1.2.1&q=80&w=400" alt="AI in action" class="gallery-image" loading="lazy">
+                    </picture>
                     <figcaption>Artificial Intelligence and Technology</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1562577309-2592ab84b1bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDV8fG1hY2hpbmUlMjBsZWFybmluZ3xlbnwwfHx8fDE2MzQyNDMwNzI&ixlib=rb-1.2.1&q=80&w=400" alt="Machine Learning Visualization" class="gallery-image" loading="lazy">
+                    <picture>
+                        <source srcset="https://images.unsplash.com/photo-1562577309-2592ab84b1bc.webp" type="image/webp">
+                        <img src="https://images.unsplash.com/photo-1562577309-2592ab84b1bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDV8fG1hY2hpbmUlMjBsZWFybmluZ3xlbnwwfHx8fDE2MzQyNDMwNzI&ixlib=rb-1.2.1&q=80&w=400" alt="Machine Learning Visualization" class="gallery-image" loading="lazy">
+                    </picture>
                     <figcaption>Machine Learning Visualization</figcaption>
                 </figure>
                 <!-- Existing images -->
@@ -79,10 +123,13 @@
     <footer>
         <p>&copy; 2024 Jaafar Benabderrazak. All rights reserved.</p>
         <div class="social-links">
-            <a href="https://github.com/jaafarbenabderrazak" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://linkedin.com/in/jaafarbenabderrazak" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://medium.com/@jaafarbenabderrazak" target="_blank" rel="noopener noreferrer">Medium</a>
+            <a href="https://github.com/jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+            <a href="https://linkedin.com/in/jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://medium.com/@jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="Medium">Medium</a>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to Top">↑</button>
 </body>
 </html>
