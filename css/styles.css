@@ -350,3 +350,78 @@ html {
         width: 100%;
     }
 }
+
+/* About Section */
+.about-section {
+    padding: 60px 20px;
+    background-color: #ecf0f1;
+    animation: fadeInUp 1s ease-out;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1 1 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    flex: 2 1 600px;
+}
+
+.about-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.about-content h2 {
+    font-size: 2em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.experience-list, .education-list, .skills-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.experience-item {
+    margin-bottom: 25px;
+}
+
+.experience-item h3 {
+    font-size: 1.5em;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.experience-item .date {
+    display: block;
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.experience-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.education-list li, .skills-list li {
+    margin-bottom: 10px;
+}
+
+.skills-list li {
+    font-weight: 500;
+}
