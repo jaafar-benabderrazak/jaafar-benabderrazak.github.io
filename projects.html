@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Jaafar Benabderrazak</title>
     <meta name="description" content="Découvrez les projets de Jaafar Benabderrazak en Machine Learning, Data Science et Intelligence Artificielle.">
@@ -14,9 +13,6 @@
     
     <!-- Favicon -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/3/3f/Favicon.ico" type="image/x-icon">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papQJmOT6aKd1V6UjmnUSK9JuV8OC8RUS0aZ2cPhH6VDFDyb3Qxf0uS2yyo2BXQm4lWlj8iAqby+k4wzvcNJbw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
@@ -42,7 +38,6 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li> <!-- Optional: Add Blog if exists -->
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="resume.html">Resume</a></li>
             </ul>
@@ -50,16 +45,13 @@
     </header>
 
     <main>
-        <!-- Projects Header -->
-        <section class="projects-header" aria-labelledby="projects-heading">
-            <h1 id="projects-heading">Projects</h1>
-            <p>Explore some of my key projects that showcase my skills in Machine Learning, Data Science, and AI.</p>
-        </section>
-
-        <!-- Projects List -->
-        <section class="projects-section" aria-labelledby="projects-list-heading">
-            <h2 id="projects-list-heading" class="sr-only">List of Projects</h2>
+        <section class="projects-section" aria-labelledby="projects-heading">
+            <div class="projects-header">
+                <h1 id="projects-heading">Projects</h1>
+                <p>Explore some of my key projects that showcase my skills in Machine Learning, Data Science, and AI.</p>
+            </div>
             <div class="projects-container">
+
                 <!-- Project 1 -->
                 <div class="project-card" id="grtgaz-gas-propagation">
                     <a href="https://github.com/jaafarbenabderrazak/gas-propagation-prediction" target="_blank" aria-label="View Gas Propagation Prediction Tool on GitHub">
@@ -74,8 +66,8 @@
                             <strong>Results:</strong> Improved prediction accuracy by 15%, enhancing pipeline monitoring and maintenance scheduling.
                         </p>
                         <div class="project-buttons">
-                            <a href="https://github.com/jaafarbenabderrazak/gas-propagation-prediction" target="_blank" class="btn btn-secondary">View on GitHub</a>
-                            <a href="https://grtgaz.com/gas-propagation-demo" target="_blank" class="btn btn-secondary">Live Demo</a>
+                            <a href="https://github.com/jaafarbenabderrazak/gas-propagation-prediction" target="_blank" class="btn">View on GitHub</a>
+                            <a href="https://grtgaz.com/gas-propagation-demo" target="_blank" class="btn">Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -94,8 +86,8 @@
                             <strong>Results:</strong> Reduced documentation retrieval time by 40%, enhancing team productivity and coordination.
                         </p>
                         <div class="project-buttons">
-                            <a href="https://github.com/jaafarbenabderrazak/chatbot-documentation" target="_blank" class="btn btn-secondary">View on GitHub</a>
-                            <a href="https://grtgaz.com/chatbot-demo" target="_blank" class="btn btn-secondary">Live Demo</a>
+                            <a href="https://github.com/jaafarbenabderrazak/chatbot-documentation" target="_blank" class="btn">View on GitHub</a>
+                            <a href="https://grtgaz.com/chatbot-demo" target="_blank" class="btn">Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -114,8 +106,8 @@
                             <strong>Results:</strong> Increased deployment speed by 30%, improved model tracking and versioning, and ensured scalable machine learning operations.
                         </p>
                         <div class="project-buttons">
-                            <a href="https://github.com/jaafarbenabderrazak/mlops-platform" target="_blank" class="btn btn-secondary">View on GitHub</a>
-                            <a href="https://devoteam.com/mlops-demo" target="_blank" class="btn btn-secondary">Live Demo</a>
+                            <a href="https://github.com/jaafarbenabderrazak/mlops-platform" target="_blank" class="btn">View on GitHub</a>
+                            <a href="https://devoteam.com/mlops-demo" target="_blank" class="btn">Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -134,8 +126,8 @@
                             <strong>Results:</strong> Enhanced fraud detection accuracy by 25%, automated alert generation, and provided critical insights to financial agents.
                         </p>
                         <div class="project-buttons">
-                            <a href="https://github.com/jaafarbenabderrazak/aml-ctf-fraud-detection" target="_blank" class="btn btn-secondary">View on GitHub</a>
-                            <a href="https://cgi.com/fraud-detection-demo" target="_blank" class="btn btn-secondary">Live Demo</a>
+                            <a href="https://github.com/jaafarbenabderrazak/aml-ctf-fraud-detection" target="_blank" class="btn">View on GitHub</a>
+                            <a href="https://cgi.com/fraud-detection-demo" target="_blank" class="btn">Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -154,13 +146,14 @@
                             <strong>Results:</strong> Delivered actionable insights, improved model performance, and enhanced data processing capabilities.
                         </p>
                         <div class="project-buttons">
-                            <a href="https://github.com/jaafarbenabderrazak/data-science-projects" target="_blank" class="btn btn-secondary">View on GitHub</a>
-                            <a href="https://cgi.com/data-science-demo" target="_blank" class="btn btn-secondary">Live Demo</a>
+                            <a href="https://github.com/jaafarbenabderrazak/data-science-projects" target="_blank" class="btn">View on GitHub</a>
+                            <a href="https://cgi.com/data-science-demo" target="_blank" class="btn">Live Demo</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Add more projects as needed -->
+
             </div>
         </section>
     </main>
@@ -169,23 +162,18 @@
         <p>&copy; 2024 Jaafar Benabderrazak. All rights reserved.</p>
         <div class="social-links">
             <a href="https://github.com/jaafar-benabderrazak" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fab fa-github"></i>
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="social-icon">
             </a>
             <a href="https://www.linkedin.com/in/jaafar-benabderrazak/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon" class="social-icon">
             </a>
             <a href="https://medium.com/@jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="Medium">
-                <i class="fab fa-medium"></i>
-            </a>
-            <a href="https://twitter.com/jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Medium Icon" class="social-icon">
             </a>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" aria-label="Back to Top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <button id="back-to-top" aria-label="Back to Top">↑</button>
 </body>
 </html>

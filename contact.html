@@ -14,9 +14,6 @@
     <!-- Favicon -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/3/3f/Favicon.ico" type="image/x-icon">
     
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papQJmOT6aKd1V6UjmnUSK9JuV8OC8RUS0aZ2cPhH6VDFDyb3Qxf0uS2yyo2BXQm4lWlj8iAqby+k4wzvcNJbw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
     
@@ -52,7 +49,6 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li> <!-- Optional: Add Blog if exists -->
                 <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
                 <li><a href="resume.html">Resume</a></li>
             </ul>
@@ -60,15 +56,11 @@
     </header>
 
     <main>
-        <!-- Contact Header -->
-        <section class="contact-header" aria-labelledby="contact-heading">
-            <h1 id="contact-heading">Contact Me</h1>
-            <p>I'd love to hear from you! Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out.</p>
-        </section>
-
-        <!-- Contact Container -->
-        <section class="contact-section" aria-labelledby="contact-section-heading">
-            <h2 id="contact-section-heading" class="sr-only">Contact Information and Form</h2>
+        <section class="contact-section" aria-labelledby="contact-heading">
+            <div class="contact-header">
+                <h1 id="contact-heading">Contact Me</h1>
+                <p>I'd love to hear from you! Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out.</p>
+            </div>
             <div class="contact-container">
                 <div class="contact-form-container">
                     <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
@@ -84,7 +76,7 @@
                             <label for="message">Message<span aria-hidden="true">*</span></label>
                             <textarea id="message" name="message" rows="5" placeholder="Your Message" required aria-required="true"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn">Send Message</button>
                         <p class="form-feedback" id="form-feedback" role="alert" aria-live="polite"></p>
                     </form>
                 </div>
@@ -99,16 +91,13 @@
                         <h2>Follow Me</h2>
                         <div class="social-icons">
                             <a href="https://github.com/jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
+                                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="social-icon">
                             </a>
                             <a href="https://linkedin.com/in/jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
+                                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon" class="social-icon">
                             </a>
                             <a href="https://medium.com/@jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="Medium">
-                                <i class="fab fa-medium"></i>
-                            </a>
-                            <a href="https://twitter.com/jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                                <i class="fab fa-twitter"></i>
+                                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Medium Icon" class="social-icon">
                             </a>
                         </div>
                     </div>
@@ -124,23 +113,18 @@
         <p>&copy; 2024 Jaafar Benabderrazak. All rights reserved.</p>
         <div class="social-links">
             <a href="https://github.com/jaafar-benabderrazak" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fab fa-github"></i>
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="social-icon">
             </a>
             <a href="https://www.linkedin.com/in/jaafar-benabderrazak/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon" class="social-icon">
             </a>
             <a href="https://medium.com/@jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="Medium">
-                <i class="fab fa-medium"></i>
-            </a>
-            <a href="https://twitter.com/jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Medium Icon" class="social-icon">
             </a>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" aria-label="Back to Top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <button id="back-to-top" aria-label="Back to Top">↑</button>
 </body>
 </html>
