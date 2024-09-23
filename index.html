@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaafar Benabderrazak - Machine Learning Engineer</title>
+    <meta name="description" content="Portfolio de Jaafar Benabderrazak présentant des projets en Machine Learning, Data Science et Intelligence Artificielle.">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script defer src="js/scripts.js"></script>
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Navigation Principale">
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
@@ -20,38 +23,64 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <img src="images/profile.jpg" alt="Jaafar Benabderrazak" class="profile-pic">
-        <h1>Hi, I'm Jaafar Benabderrazak</h1>
-        <p>Machine Learning Engineer | Data Scientist | AI Enthusiast</p>
-        <a href="projects.html" class="btn">View My Work</a>
-    </section>
+    <main>
+        <section class="hero">
+            <img src="images/profile.jpg" alt="Portrait de Jaafar Benabderrazak" class="profile-pic" loading="lazy">
+            <h1>Hi, I'm Jaafar Benabderrazak</h1>
+            <p>Machine Learning Engineer | Data Scientist | AI Enthusiast</p>
+            <a href="projects.html" class="btn" role="button">View My Work</a>
+        </section>
 
-    <section class="featured-projects">
-        <h2>Featured Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <img src="images/project_grtgaz_gas_propagation.png" alt="Gas Propagation Prediction Tool">
-                <h3>Gas Propagation Prediction Tool</h3>
-                <p>Predicting gas dynamics in pipelines using time series data in an AWS environment.</p>
-                <a href="projects.html#grtgaz-gas-propagation" class="btn">Learn More</a>
+        <section class="featured-projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-container">
+                <article class="project-card">
+                    <img src="images/project_grtgaz_gas_propagation.png" alt="Outil de Prédiction de Propagation de Gaz" class="project-image" loading="lazy">
+                    <h3>Gas Propagation Prediction Tool</h3>
+                    <p>Predicting gas dynamics in pipelines using time series data in an AWS environment.</p>
+                    <a href="projects.html#grtgaz-gas-propagation" class="btn" role="button">Learn More</a>
+                </article>
+                <article class="project-card">
+                    <img src="images/project_grtgaz_chatbot.png" alt="Chatbot pour la Consultation de Documentation" class="project-image" loading="lazy">
+                    <h3>Chatbot for Documentation Querying</h3>
+                    <p>Developed a chatbot interfacing with Confluence to retrieve documentation, enhancing operational efficiency.</p>
+                    <a href="projects.html#grtgaz-chatbot" class="btn" role="button">Learn More</a>
+                </article>
+                <article class="project-card">
+                    <img src="images/project_data_visualization.png" alt="Outil de Visualisation de Données" class="project-image" loading="lazy">
+                    <h3>Data Visualization Tool</h3>
+                    <p>Created interactive dashboards using Tableau and Python to visualize complex datasets.</p>
+                    <a href="projects.html#data-visualization" class="btn" role="button">Learn More</a>
+                </article>
             </div>
-            <div class="project-card">
-                <img src="images/project_grtgaz_chatbot.png" alt="Chatbot for Documentation Querying">
-                <h3>Chatbot for Documentation Querying</h3>
-                <p>Developed a chatbot interfacing with Confluence to retrieve documentation, enhancing operational efficiency.</p>
-                <a href="projects.html#grtgaz-chatbot" class="btn">Learn More</a>
+        </section>
+
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <figure class="gallery-item">
+                    <img src="images/gallery_event1.jpg" alt="Participation au Marathon de Paris 2023" class="gallery-image" loading="lazy">
+                    <figcaption>Participation au Marathon de Paris 2023</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/gallery_event2.jpg" alt="Analyse de Données lors du Championnat de Football 2024" class="gallery-image" loading="lazy">
+                    <figcaption>Analyse de Données lors du Championnat de Football 2024</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/gallery_event3.jpg" alt="Conférence sur l'Intelligence Artificielle à Lyon" class="gallery-image" loading="lazy">
+                    <figcaption>Conférence sur l'Intelligence Artificielle à Lyon</figcaption>
+                </figure>
+                <!-- Ajoutez plus d'images de galerie si nécessaire -->
             </div>
-            <!-- Add more project cards as needed -->
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2024 Jaafar Benabderrazak. All rights reserved.</p>
         <div class="social-links">
-            <a href="https://github.com/jaafarbenabderrazak" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/jaafarbenabderrazak" target="_blank">LinkedIn</a>
-            <a href="https://medium.com/@jaafarbenabderrazak" target="_blank">Medium</a>
+            <a href="https://github.com/jaafarbenabderrazak" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/jaafarbenabderrazak" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://medium.com/@jaafarbenabderrazak" target="_blank" rel="noopener noreferrer">Medium</a>
         </div>
     </footer>
 </body>
