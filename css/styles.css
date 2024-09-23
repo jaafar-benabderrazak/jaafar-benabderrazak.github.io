@@ -7,60 +7,57 @@
     --secondary-color: #e74c3c;        /* Vibrant Red */
     --accent-color: #3498db;           /* Bright Blue */
     --background-gradient: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    --hero-background-home: url('https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); /* Home Hero background image */
-    --hero-background-projects: url('https://images.unsplash.com/photo-1602526210406-3a23d3c8e5ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); /* Projects Hero background image */
-
+    
     /* Text Colors */
     --text-color: #333333;             /* Dark Gray */
     --light-text: #ecf0f1;             /* Light Gray */
     --muted-text: #7f8c8d;             /* Muted Gray */
-
+    
     /* Background Colors */
     --background-color: #f4f4f4;       /* Light Gray */
     --section-bg: #ffffff;             /* White */
-    --hero-overlay: rgba(44, 62, 80, 0.6); /* Hero overlay color */
-
+    
     /* Shadows and Borders */
     --shadow-color: rgba(0, 0, 0, 0.1);
     --hover-shadow: rgba(0, 0, 0, 0.2);
     --border-radius: 15px;
-
+    
     /* Transitions */
     --transition-speed: 0.3s;
-
+    
     /* Font Sizes */
     --font-size-base: 16px;
     --font-size-lg: 1.5rem;
     --font-size-xl: 2.5rem;
     --font-size-xxl: 3rem;
-
+    
     /* Spacing */
     --spacing-xs: 5px;
     --spacing-sm: 10px;
     --spacing-md: 20px;
     --spacing-lg: 40px;
     --spacing-xl: 60px;
-
+    
     /* Progress Bar Colors */
     --progress-bg: #d1d1d1;
     --progress-fill: var(--secondary-color);
-
+    
     /* Timeline Colors */
     --timeline-line: #e0e0e0;
     --timeline-icon-bg: var(--secondary-color);
     --timeline-icon-color: #fff;
-
+    
     /* Button Styles */
     --btn-primary-bg: var(--secondary-color);
     --btn-primary-hover: #c0392b;
     --btn-primary-color: #fff;
     --btn-border-radius: 30px;
     --btn-padding: 12px 30px;
-
+    
     /* Testimonials */
     --testimonial-bg: #f9f9f9;
     --testimonial-border: #e0e0e0;
-
+    
     /* Hobbies */
     --hobby-icon-size: 40px;
     --hobby-icon-color: var(--secondary-color);
@@ -219,13 +216,13 @@ nav {
     box-shadow: 0 6px 10px var(--hover-shadow);
 }
 
-/* Hero Section Specific Styles */
-.hero-section.hero {
-    background-image: var(--hero-background-home);
+/* Hero Background Images for Different Pages */
+.hero.home-hero {
+    background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
 }
 
 .hero.projects-hero {
-    background-image: var(--hero-background-projects);
+    background-image: url('https://images.unsplash.com/photo-1602526210406-3a23d3c8e5ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
 }
 
 /* ============================================================= */
@@ -253,22 +250,6 @@ nav {
     justify-content: center;
     align-items: center;
     position: relative;
-}
-
-.profile-pic {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: var(--spacing-md);
-    border: 4px solid var(--secondary-color);
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    box-shadow: 0 4px 8px var(--shadow-color);
-}
-
-.profile-pic:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px var(--hover-shadow);
 }
 
 .about-content {
@@ -300,6 +281,9 @@ nav {
     line-height: 1.8;
 }
 
+/* ============================================================= */
+/*                          SKILLS SECTION                       */
+/* ============================================================= */
 .progress-section {
     margin-bottom: var(--spacing-lg);
 }
@@ -726,7 +710,7 @@ nav {
 }
 
 /* ============================================================= */
-/*                            CONTACT SECTION                    */
+/*                             CONTACT SECTION                    */
 /* ============================================================= */
 .contact-section {
     padding: var(--spacing-xl) var(--spacing-md);
@@ -918,6 +902,77 @@ button[type="submit"].btn {
 }
 
 /* ============================================================= */
+/*                             PROJECTS PAGE                      */
+/* ============================================================= */
+.projects-container .project-card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.projects-container .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.projects-container .project-card a {
+    flex: 1 1 300px;
+    display: block;
+    position: relative;
+}
+
+.projects-container .project-card img.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-speed);
+}
+
+.projects-container .project-card a:hover img.project-image {
+    transform: scale(1.05);
+}
+
+.projects-container .project-content {
+    flex: 2 1 500px;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.projects-container .project-content h2 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.projects-container .project-content p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.projects-container .project-buttons {
+    margin-top: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.projects-container .project-buttons .btn {
+    flex: 1;
+    text-align: center;
+}
+
+/* ============================================================= */
+/*                             GALLERY                           */
+/* ============================================================= */
+/* Already covered in Gallery section */
+
+/* ============================================================= */
 /*                             FOOTER                           */
 /* ============================================================= */
 footer {
@@ -982,36 +1037,9 @@ footer .social-links a:hover {
 }
 
 /* ============================================================= */
-/*                          PROJECTS STYLES                     */
-/* ============================================================= */
-/* Already covered in the Projects Section above */
-
-/* ============================================================= */
-/*                          CONTACT STYLES                      */
-/* ============================================================= */
-/* Already covered in the Contact Section above */
-
-/* ============================================================= */
 /*                          BUTTON STYLES                       */
 /* ============================================================= */
-/* General Button Styles */
-.btn {
-    display: inline-block;
-    padding: var(--btn-padding);
-    background-color: var(--btn-primary-bg);
-    color: var(--btn-primary-color);
-    text-decoration: none;
-    border-radius: var(--btn-border-radius);
-    font-weight: 500;
-    transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
-    box-shadow: 0 4px 6px var(--shadow-color);
-}
-
-.btn:hover {
-    background-color: var(--btn-primary-hover);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 10px var(--hover-shadow);
-}
+/* Already covered in .btn class */
 
 /* ============================================================= */
 /*                      MEDIA QUERIES                          */
@@ -1039,15 +1067,15 @@ footer .social-links a:hover {
         gap: var(--spacing-lg);
     }
 
-    .project-card {
+    .projects-container .project-card {
         flex-direction: column;
     }
 
-    .project-card a {
+    .projects-container .project-card a {
         flex: 1 1 100%;
     }
 
-    .project-content {
+    .projects-container .project-content {
         flex: 2 1 100%;
     }
 }
@@ -1098,13 +1126,17 @@ footer .social-links a:hover {
         flex-direction: column;
     }
 
-    .project-content {
+    .projects-container .project-content {
         padding: var(--spacing-sm);
     }
 
     /* Gallery */
     .gallery-container {
         flex-direction: column;
+    }
+
+    .gallery-item img.gallery-image {
+        height: 150px;
     }
 
     /* Contact Section */
@@ -1140,15 +1172,15 @@ footer .social-links a:hover {
         height: 150px;
     }
 
-    .project-content h2 {
+    .projects-container .project-content h2 {
         font-size: 1.5em;
     }
 
-    .project-content p {
+    .projects-container .project-content p {
         font-size: 0.95em;
     }
 
-    .project-buttons .btn {
+    .projects-container .project-buttons .btn {
         font-size: 0.9em;
         padding: 10px 20px;
     }
