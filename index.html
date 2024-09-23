@@ -15,6 +15,9 @@
     <!-- Favicon -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/3/3f/Favicon.ico" type="image/x-icon">
     
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papQJmOT6aKd1V6UjmnUSK9JuV8OC8RUS0aZ2cPhH6VDFDyb3Qxf0uS2yyo2BXQm4lWlj8iAqby+k4wzvcNJbw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
     
@@ -46,6 +49,7 @@
                 <li><a href="index.html" class="active" aria-current="page">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li> <!-- Optional: Add Blog if exists -->
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="resume.html">Resume</a></li>
             </ul>
@@ -53,14 +57,18 @@
     </header>
 
     <main>
-        <section class="hero" aria-labelledby="hero-heading">
-            <img src="images/profile.jpg" alt="Portrait de Jaafar Benabderrazak" class="profile-pic" loading="lazy">
-            <h1 id="hero-heading">Hi, I'm Jaafar Benabderrazak</h1>
-            <p>Machine Learning Engineer | Data Scientist | AI Enthusiast</p>
-            <a href="projects.html" class="btn" role="button">View My Work</a>
+        <!-- Hero Section -->
+        <section class="hero-section" aria-labelledby="hero-heading">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 id="hero-heading">Welcome to My Portfolio</h1>
+                <p>Machine Learning Engineer | Data Scientist | AI Enthusiast</p>
+                <a href="#featured-projects" class="btn-primary">Explore My Work</a>
+            </div>
         </section>
 
-        <section class="featured-projects" aria-labelledby="featured-projects-heading">
+        <!-- Featured Projects -->
+        <section class="featured-projects" id="featured-projects" aria-labelledby="featured-projects-heading">
             <h2 id="featured-projects-heading">Featured Projects</h2>
             <div class="projects-container">
                 <article class="project-card">
@@ -70,7 +78,7 @@
                     </picture>
                     <h3>Gas Propagation Prediction Tool</h3>
                     <p>Predicting gas dynamics in pipelines using time series data in an AWS environment.</p>
-                    <a href="projects.html#grtgaz-gas-propagation" class="btn" role="button">Learn More</a>
+                    <a href="projects.html#grtgaz-gas-propagation" class="btn btn-secondary" role="button">Learn More</a>
                 </article>
                 <article class="project-card">
                     <picture>
@@ -79,24 +87,24 @@
                     </picture>
                     <h3>Chatbot for Documentation Querying</h3>
                     <p>Developed a chatbot interfacing with Confluence to retrieve documentation, enhancing operational efficiency.</p>
-                    <a href="projects.html#grtgaz-chatbot" class="btn" role="button">Learn More</a>
+                    <a href="projects.html#grtgaz-chatbot" class="btn btn-secondary" role="button">Learn More</a>
                 </article>
                 <article class="project-card">
                     <picture>
                         <source srcset="https://images.unsplash.com/photo-1593642634367-d91a135587b5.webp" type="image/webp">
-                        <img src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGRhdGF8ZW58MHx8fHwxNjM0MjQwNjI3&ixlib=rb-1.2.1&q=80&w=400" alt="Outil de Visualisation de Données" class="project-image" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGRhdGF8ZW58MHx8fHwxNjM0MjQwNjI3&ixlib=rb-1.2.1&q=80&w=400" alt="Outil de Visualisation de Données" class="gallery-image" loading="lazy">
                     </picture>
                     <h3>Data Visualization Tool</h3>
                     <p>Created interactive dashboards using Tableau and Python to visualize complex datasets.</p>
-                    <a href="projects.html#data-visualization" class="btn" role="button">Learn More</a>
+                    <a href="projects.html#data-visualization" class="btn btn-secondary" role="button">Learn More</a>
                 </article>
             </div>
         </section>
 
+        <!-- Gallery -->
         <section class="gallery" aria-labelledby="gallery-heading">
             <h2 id="gallery-heading">Gallery</h2>
             <div class="gallery-container">
-                <!-- Added images from open data sources -->
                 <figure class="gallery-item">
                     <picture>
                         <source srcset="https://images.unsplash.com/photo-1602526210406-3a23d3c8e5ec.webp" type="image/webp">
@@ -111,11 +119,11 @@
                     </picture>
                     <figcaption>Machine Learning Visualization</figcaption>
                 </figure>
-                <!-- Existing images -->
                 <figure class="gallery-item">
                     <img src="images/gallery_event3.jpg" alt="Conférence sur l'Intelligence Artificielle à Lyon" class="gallery-image" loading="lazy">
                     <figcaption>Conférence sur l'Intelligence Artificielle à Lyon</figcaption>
                 </figure>
+                <!-- Add more images as needed -->
             </div>
         </section>
     </main>
@@ -123,13 +131,24 @@
     <footer>
         <p>&copy; 2024 Jaafar Benabderrazak. All rights reserved.</p>
         <div class="social-links">
-            <a href="https://github.com/jaafar-benabderrazak" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
-            <a href="https://www.linkedin.com/in/jaafar-benabderrazak/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
-            <a href="@jaafarbenabderrazak-info" target="_blank" rel="noopener noreferrer" aria-label="Medium">Medium</a>
+            <a href="https://github.com/jaafar-benabderrazak" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jaafar-benabderrazak/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://medium.com/@jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="Medium">
+                <i class="fab fa-medium"></i>
+            </a>
+            <a href="https://twitter.com/jaafarbenabderrazak" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" aria-label="Back to Top">↑</button>
+    <button id="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html>

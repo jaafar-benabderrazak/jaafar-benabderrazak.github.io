@@ -1,29 +1,81 @@
+// scripts.js
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Sticky Header functionality handled via CSS class toggling on scroll
-    const header = document.querySelector('header');
     const backToTopButton = document.getElementById('back-to-top');
 
-    // Toggle 'scrolled' class for header on scroll
+    // Show or hide the back-to-top button
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-
-        // Show or hide Back to Top button
         if (window.scrollY > 300) {
-            backToTopButton.style.display = 'flex';
+            backToTopButton.classList.add('show');
         } else {
-            backToTopButton.style.display = 'none';
+            backToTopButton.classList.remove('show');
         }
     });
 
-    // Back to Top button functionality
+    // Scroll back to top smoothly when the button is clicked
     backToTopButton.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
+    });
+
+    // Form Submission Feedback
+    const contactForm = document.getElementById('contact-form');
+    const formFeedback = document.getElementById('form-feedback');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+
+            fetch(contactForm.action, {
+                method: contactForm.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    contactForm.reset();
+                    formFeedback.textContent = 'Thank you for your message! I will get back to you soon.';
+                    formFeedback.style.color = 'green';
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            formFeedback.textContent = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            formFeedback.textContent = 'Oops! There was a problem submitting your form.';
+                        }
+                        formFeedback.style.color = 'red';
+                    })
+                }
+            })
+            .catch(error => {
+                formFeedback.textContent = 'Oops! There was a problem submitting your form.';
+                formFeedback.style.color = 'red';
+            });
+        });
+    }
+
+    // Optional: Add scroll-based animations for new sections
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const animatedElements = document.querySelectorAll('.project-card, .gallery-item, .contact-section, .contact-info, .contact-image');
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
     });
 });
